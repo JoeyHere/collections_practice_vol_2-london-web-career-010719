@@ -33,7 +33,7 @@ locations = schools.values.collect {|x| x[:location]}.uniq!
 school_h = {}
   locations.each do |city|
     school_h[city]=[]
-    schools.each {|school, local| hash[city] << school_h if local[:location] == city}
+    schools.each {|school, local| school_h[city] << school if local[:location] == city}
   end
 school_h
 end
